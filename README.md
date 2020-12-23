@@ -14,6 +14,12 @@ https://hub.docker.com/r/seunglab/igneous/
 
 You'll need Python 3, pip, (possibly) a C++ compiler (e.g. g++ or clang), and virtualenv. It's tested under Ubuntu 16.04 and Mac OS Catalina. 
 
+Install the customized cloudvolume for subfolder structure:
+
+```
+git clone https://github.com/donglaiw/cloud-volume
+```
+
 ```bash
 git clone git@github.com:seung-lab/igneous.git
 cd igneous

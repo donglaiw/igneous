@@ -740,7 +740,7 @@ def create_meshing_tasks(
     mesh_dir=None, cdn_cache=False, dust_threshold=None,
     object_ids=None, progress=False, fill_missing=False,
     encoding='precomputed', spatial_index=True, sharded=False,
-    compress='gzip'
+    compress='gzip', do_subdir = False
   ):
   shape = Vec(*shape)
 
@@ -784,6 +784,7 @@ def create_meshing_tasks(
         spatial_index=spatial_index,
         sharded=sharded,
         compress=compress,
+        do_subdir=do_subdir,
       )
 
     def on_finish(self):

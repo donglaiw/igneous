@@ -139,6 +139,11 @@ class MeshTask(RegisteredTask):
       parallel=self.options['parallel_download'], 
       fill_missing=self.options['fill_missing']
     )
+    if self.do_subdir:
+        self._volume.meta.name_sep = '/'
+    else:
+        self._volume.meta.name_sep = '-'
+
     self._bounds = Bbox(self.offset, self.shape + self.offset)
     self._bounds = Bbox.clamp(self._bounds, self._volume.bounds)
 

@@ -142,7 +142,7 @@ class MeshTask(RegisteredTask):
     if self.do_subdir:
         self._volume.meta.name_sep = '/'
     else:
-        self._volume.meta.name_sep = '-'
+        self._volume.meta.name_sep = '_'
 
     self._bounds = Bbox(self.offset, self.shape + self.offset)
     self._bounds = Bbox.clamp(self._bounds, self._volume.bounds)
